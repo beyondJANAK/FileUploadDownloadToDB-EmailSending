@@ -1,0 +1,6 @@
+rabbitmq:
+  queue:
+    name: emailSender
+  exchange:
+    name: emailSenderExchange
+  routing-key: emailSenderRoutingKey

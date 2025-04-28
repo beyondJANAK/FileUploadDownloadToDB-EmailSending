@@ -1,6 +1,8 @@
 package com.janak.FileUploadAndDownload.dto;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
+import com.janak.FileUploadAndDownload.emuns.EmailType;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,15 +13,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MailRequest {
-    @JsonAlias(value = "to_email")
+    @Email
     private String toEmail;
 
+    private EmailType emailType;
+
+    @NotNull
     private String subject;
-    private String message;
 
-    @JsonAlias(value = "html")
-    private boolean isHtml;
-
-    private String name;
-    private String confirmationLink;
+    private String userName;
+    private String activationLink;
 }

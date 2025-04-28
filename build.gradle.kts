@@ -32,9 +32,9 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
-	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
-	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mail
-	implementation("org.springframework.boot:spring-boot-starter-mail:3.4.4")
+	implementation("org.springframework.boot:spring-boot-starter-amqp")
+	testImplementation("org.springframework.amqp:spring-rabbit-test")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
 }
 
 tasks.withType<Test> {

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: FileUploadDownloadAndEmailSendingThroughRabbitMQ
+
+  profiles:
+    active: rabbitmq
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/multipartfile
+    username: Janak
+    password: Janak
+    hikari:
+      auto-commit: false
+
+  jpa:
+    hibernate:
+      ddl-auto: update
